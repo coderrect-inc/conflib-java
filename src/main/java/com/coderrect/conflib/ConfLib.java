@@ -79,6 +79,7 @@ public class ConfLib {
             for (String s : args) {
                 if (s.startsWith("-conf=")) {
                     confPath = _getConfValue(s);
+                    break;
                 }
             }
             File customFile = new File(confPath);
@@ -152,7 +153,6 @@ public class ConfLib {
             }
         }
 
-        System.out.println(ctx.jsonString());
         return ctx;
     }
 
